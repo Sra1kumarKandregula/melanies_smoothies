@@ -1,6 +1,6 @@
 # Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
+#from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col, when_matched
 
 # Write directly to the app
@@ -33,8 +33,8 @@ if ingredients_list:
   my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
             values ('""" + ingredients_string + """','""" + name_on_order + """')"""
 
-  st.write(my_insert_stmt)
-  st.stop()
+  #st.write(my_insert_stmt)
+  #st.stop()
   time_to_insert = st.button('Submit order')
 
   if time_to_insert:
